@@ -1,0 +1,131 @@
+<div class="container--hero edit-headline">
+  <h1 class="center">table layout</h1>
+  <div class="table-container">
+    <table class="table table-bordered table-dark table-hover">
+      <thead>
+        <tr>
+          <th class="center">Customer Name</th>
+          <th class="center">Customer Age</th>
+          <th class="center">Customer Email</th>
+          <th class="center">Handle</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let pd of service.list">
+          <th class="center" (click)="populateForm(pd)" data-bs-toggle="modal" data-bs-target="#exampleModal2">{{ pd.name }}</th>
+          <th class="center" (click)="populateForm(pd)" data-bs-toggle="modal" data-bs-target="#exampleModal2">{{ pd.age }}</th>
+          <th class="center" (click)="populateForm(pd)" data-bs-toggle="modal" data-bs-target="#exampleModal2">{{ pd.email }}</th>
+          <th class="center">
+            <i class="far fa-trash-alt fa-lg text-danger"></i>
+          </th>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ------------------------
+  --------Modal Button --------
+  ------------------------- -->
+  <div class="container p-5">
+    <button
+      type="button"
+      class="button-8"
+      role="button"
+      data-bs-toggle="modal"
+      data-bs-target="#exampleModal2"
+    >
+      Modal Form
+    </button>
+  </div>
+   <!-- -----------------------
+  --------Modal Button --------
+  ------------------------- -->
+
+
+   <!-- --------------------
+  --------Modal Body --------
+  ----------------------- -->
+  <div
+    class="modal fade"
+    id="exampleModal2"
+    tabindex="-1"
+    aria-labelledby="exampleModal2Label"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title text-danger" id="exampleModal2Label">
+            Login Form
+          </h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">
+
+
+            <!-- ----------------------------------------
+            ----------------FORM SECTION ----------------
+            ----------------------------------------- -->
+            <div class="one_half last">
+              <form
+                class="contact-form"
+              >
+                <p>
+                  <input type="text" placeholder="Name" formControlName="name" />
+                  <span class="error-msg">
+                    Name field is invalid
+                  </span>
+                </p>
+
+                <br>
+                <p>
+                  <input type="text" placeholder="Age" formControlName="age" />
+                  <span class="error-msg">
+                    Age field is invalid
+                  </span>
+                </p>
+
+                <br>
+                <p>
+                  <input type="text" placeholder="Email" formControlName="email" />
+                  <span
+                    class="error-msg"
+                  >
+                    Email field is invalid
+                  </span>
+                </p>
+
+                <br> <br>
+                <p class="contact-submit-holder">
+                  <input type="submit" />
+                </p>
+              </form>
+
+            </div>
+            <!-- ----------------------------------------
+            ----------------FORM SECTION ----------------
+            ----------------------------------------- -->
+
+
+
+        </div>
+        <!-- <div class="modal-footer">
+          <button type="button" class="button-8" data-bs-dismiss="modal">
+            Close
+          </button>
+        </div> -->
+      </div>
+    </div>
+  </div>
+</div>
+<!-- --------------------
+--------Modal Body ------
+--------------------- -->
+
+
+<footer></footer>

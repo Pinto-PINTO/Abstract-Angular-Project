@@ -1,0 +1,76 @@
+<div class="container--hero edit-headline">
+  <h1 class="center">form section</h1>
+  <div class="site-wrapper">
+    <div id="content" class="site-content">
+      <div class="content-holder center-relative content-1170">
+        
+        <!-- ----------------------------------------
+        ----------------FORM SECTION ----------------
+        ----------------------------------------- -->
+        <div class="one_half last">
+          <form
+            [formGroup]="customerForm"
+            (ngSubmit)="submitDetails()"
+            class="contact-form"
+          >
+            <p>
+              <input type="text" placeholder="Name" formControlName="name" />
+              <span class="error-msg" *ngIf="name && name.invalid && name.touched">
+                Name field is invalid
+              </span>
+            </p>
+
+            <br>
+            <p>
+              <input type="text" placeholder="Age" formControlName="age" />
+              <span class="error-msg" *ngIf="age && age.invalid && age.touched">
+                Age field is invalid
+              </span>
+            </p>
+
+            <br>
+            <p>
+              <input type="text" placeholder="Email" formControlName="email" />
+              <span
+                class="error-msg"
+                *ngIf="email && email.invalid && email.touched"
+              >
+                Email field is invalid
+              </span>
+            </p>
+
+            <br> <br>
+            <p class="contact-submit-holder">
+              <input type="submit" [disabled]="customerForm.invalid" />
+            </p>
+          </form>
+
+        </div>
+        <!-- ----------------------------------------
+        ----------------FORM SECTION ----------------
+        ----------------------------------------- -->
+
+        <div class="clear"></div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+<footer></footer>
+
+<!-- 
+Repository - Model
+Service Layer - Backend Call and DB caller 
+Controller - Front end pass data to controller
+-->
+
+<!-- DO VALIDATIONS -->
+
+<!-- https://www.youtube.com/watch?v=S5dzfuh3t8U -->
+<!-- https://github.com/CodAffection/Asp.Net-Core-5.0-Web-API-CRUD-with-Angular-11 -->
+
+<!-- Reactive Forms POST Request -->
+<!-- https://www.youtube.com/watch?v=Wr5urqswiko -->
+<!-- 1:19:35 -->
